@@ -48,11 +48,11 @@ t_sr_y = []
 for i in range(0, 5):
     t_sr_x.append(i*3.14/10)
     t_sr_y.append(0)
-
+    
+plt.figure(figsize=(10, 6))
 ticks = [0, T/4, T/2, 3*T/4, T, 5*T/4, 3*T/2, 7*T/4, 2*T]
 tick_labels = ['0', 'T/4', 'T/2', '3T/4', 'T', '5T/4', '3T/2', '7T/4', '2T']
 plt.xticks(ticks, tick_labels)
-
 plt.plot(t_smooth, x_smooth)
 plt.scatter(t_sr_x, t_sr_y, color='red', zorder = 5)
 plt.scatter(t_max_x, t_max_y, color='red', zorder = 5)
